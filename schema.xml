@@ -344,7 +344,7 @@
   &extratypes;
 
     <field name="REF_DATE" type="string" indexed="true" stored="true" multiValued="false" />
-    <field name="REF_DATESTAMP" type="pdate" indexed="true" stored="true" multiValued="false" />
+    <field name="REF_DATESTAMP" type="string" indexed="true" stored="true" multiValued="false" />
     <field name="GEO" type="string" indexed="true" stored="true" multiValued="false" />
     <field name="DGUID" type="string" indexed="true" stored="true" multiValued="false" />
     <field name="companies" type="string" indexed="true" stored="true" multiValued="false" />
