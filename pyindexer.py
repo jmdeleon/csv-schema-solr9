@@ -12,14 +12,14 @@ def main(args):
   clear_index = False
 
   try:
-    opts, args = getopt.getopt(args,"hvci:u:d:")
+    opts, args = getopt.getopt(args,"hvc0i:u:d:")
   except getopt.GetoptError:
-    print('index_data.py -v -c -i inputfile -u solr_url -d delimeter')
+    print('index_data.py -v -c -0 -i inputfile -u solr_url -d delimeter')
     sys.exit(2)
 
   for opt, arg in opts:
     if opt in ('-h'):
-      print('index_data.py -v -c -i inputfile -u solr_url -d delimeter')
+      print('index_data.py -v -c -0 -i inputfile -u solr_url -d delimeter')
       sys.exit()
 
     if opt in ("-i"):
@@ -46,6 +46,8 @@ def main(args):
   s = pysolr.Solr(solr_url, timeout=10)
   if (clear_index):
     s.delete(q='*:*') # clear index
+    if opt in ("-0"):
+      sys.exit();
 
   # create records to submit to Solr
   record_count=0
