@@ -6,7 +6,7 @@ import pysolr
 
 def main(args):
   inputfile='./23100274.csv'
-  solr_url='http://my-d10-site.ddev.site:8983/solr/23100274-en'
+  solr_url='http://my-d11-site.ddev.site:8983/solr/23100274-en'
   field_delimeter = ','
   is_verbose = False
   clear_index = False
